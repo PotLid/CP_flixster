@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LFw-Nc-q9N">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LFw-Nc-q9N">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="200" id="cKt-9x-rI9" customClass="MovieCell" customModule="flixster" customModuleProvider="target">
@@ -29,10 +28,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-CY-hUp">
+                                                <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-CY-hUp">
                                                     <rect key="frame" x="20" y="11" width="117" height="178"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" name="AccentColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="117" id="gJA-2D-eba"/>
+                                                        <constraint firstAttribute="height" constant="178" id="oJ8-zF-dnB"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb2-7C-0ZI">
                                                     <rect key="frame" x="145" y="11" width="263" height="27"/>
@@ -49,6 +51,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="m5C-CY-hUp" firstAttribute="top" secondItem="VZd-QZ-fXP" secondAttribute="top" constant="11" id="4Il-SF-swU"/>
+                                                <constraint firstItem="m5C-CY-hUp" firstAttribute="leading" secondItem="VZd-QZ-fXP" secondAttribute="leading" constant="20" id="STM-W6-bZE"/>
+                                                <constraint firstAttribute="bottom" secondItem="m5C-CY-hUp" secondAttribute="bottom" constant="11" id="cu2-18-rgX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="posterView" destination="m5C-CY-hUp" id="Zab-q2-Rgg"/>
@@ -61,6 +68,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LFw-Nc-q9N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Wj-bD-HHn"/>
+                            <constraint firstItem="LFw-Nc-q9N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5bE-cl-I2G"/>
+                            <constraint firstItem="LFw-Nc-q9N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="95L-pR-9cY"/>
+                            <constraint firstAttribute="bottom" secondItem="LFw-Nc-q9N" secondAttribute="bottom" id="gzI-xI-iFq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="ZwK-3z-eaQ"/>
                     <connections>
