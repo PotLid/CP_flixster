@@ -42,5 +42,7 @@ Describe any challenges encountered while building the app.
 
 ![](https://i.imgur.com/KOYCtAq.gif)
 
+![](https://i.imgur.com/P6sM8ud.gif)
+
 ### Notes
 Describe any challenges encountered while building the app.
